@@ -13,8 +13,10 @@ import Transition from './components/Transition/index'
 import { Message } from './plugin/message'
 import Reactivity from './reactivity'
 import SlotDemo from './components/Slot/Index'
+import mixin from './mixins/newMixin'
 export default {
   name: 'App',
+  mixins: [mixin],
   components: {
     Transition,
     Reactivity,
