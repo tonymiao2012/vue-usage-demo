@@ -8,9 +8,9 @@ const getInstance = function() {
     // 单例模式
     vm = new Vue({
       render: h => h(MessageComponent)
-    }).$mount()
+    }).$mount() // 转换为真实dom
   
-    document.body.appendChild(vm.$el)
+    document.body.appendChild(vm.$el) // 挂在body上
   }
 
   return vm.$children[0];
@@ -25,7 +25,7 @@ const Message = {
 export {
   Message,
 }
-
+// 挂在到Vue上面，在全局可以用this.$message可以拿到这个插件
 export default {
   install(Vue) {
     Vue.prototype.$message = {

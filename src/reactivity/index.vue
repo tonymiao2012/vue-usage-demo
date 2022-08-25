@@ -12,7 +12,7 @@ export default {
     return {
       a: 1,
       info: {
-        name: 'xiaoming',
+        name: 'dollar',
       },
       arr: [1,2,3]
     }

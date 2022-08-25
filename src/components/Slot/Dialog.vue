@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>弹窗</div>
+    <div>{{this.title}}</div>
     <slot :contentInfo="contentInfo">默认内容</slot>
     <slot name="footer" :footerInfo="footerInfo">默认footer</slot>
   </div>
@@ -9,6 +9,10 @@
 <script>
 export default {
   props: ['title'],
+  created() {
+    // 插槽传值举例
+    console.log('current title', this.title);
+  },
   data() {
     return {
       footerInfo: {
